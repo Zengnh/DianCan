@@ -71,7 +71,7 @@ class MerchantActivity extends BaseActivity<ActivityMerchantBinding> {
         adapter = new BaseKAdapter<ShopInfo.Product, ItemMerchantBinding>() {
             @Override
             public void onItemBindData(BaseKViewHolder holder, ItemMerchantBinding binding, ShopInfo.Product data, int position) {
-                RequestOptions options = new RequestOptions().placeholder(R.mipmap.wu_img);
+                RequestOptions options = new RequestOptions().placeholder(R.mipmap.logo_new);
                 Glide.with(thisAtv).load(data.getImg()).apply(options).into(binding.img);
 
                 binding.setData(data);

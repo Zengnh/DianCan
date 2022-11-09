@@ -72,7 +72,7 @@ class MyWalletActivity extends BaseActivity<ActivityMyWalletBinding> {
                     if ("1".equals(data.getStatus())){
                         binding.tipsTv.setText("充值成功");
                         binding.moneyTv.setText("+"+data.getMoney());
-                        binding.moneyTv.setTextColor(Color.parseColor("#975D19"));
+                        binding.moneyTv.setTextColor(Color.parseColor("#FCC328"));
                     }else {
                         binding.tipsTv.setText("充值失敗");
                     }
@@ -80,7 +80,7 @@ class MyWalletActivity extends BaseActivity<ActivityMyWalletBinding> {
                     if ("1".equals(data.getStatus())){
                         binding.tipsTv.setText("消費成功");
                         binding.moneyTv.setText("-"+data.getMoney());
-                        binding.moneyTv.setTextColor(Color.parseColor("#975D19"));
+                        binding.moneyTv.setTextColor(Color.parseColor("#FCC328"));
                     }else {
                         binding.tipsTv.setText("消費失敗");
                     }

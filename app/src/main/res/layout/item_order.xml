@@ -138,7 +138,7 @@
                     <TextView
                         android:textSize="@dimen/order_item_shop_price"
                         android:text="@{data.firstGoodPrice}"
-                        android:textColor="#975D19"
+                        android:textColor="@color/blue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -172,7 +172,7 @@
                         android:layout_marginRight="18dp"
                         android:textSize="@dimen/order_item_shop_price"
                         android:text="@{data.is_outside}"
-                        android:textColor="#975D19"
+                        android:textColor="@color/blue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -349,7 +349,7 @@
                         android:layout_marginRight="18dp"
                         android:textSize="@dimen/order_item_shop_price"
                         android:text="@{data.real_amount}"
-                        android:textColor="#975D19"
+                        android:textColor="@color/blue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>

@@ -135,7 +135,7 @@ class MyFragment extends BaseFragment<FragmentMyBinding> {
     private void initUserInfo(){
         User user = User.getInstance();
         binding.setData(user);
-        RequestOptions options = new RequestOptions().placeholder(R.mipmap.logo);
+        RequestOptions options = new RequestOptions().placeholder(R.mipmap.logo_new);
         Glide.with(thisAtv).load(user.getCover())
                 .apply(options).into(binding.avatarIv);
 

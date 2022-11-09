@@ -23,7 +23,7 @@ class LoginActivity extends BaseActivity<ActivityLoginBinding> {
     @Override
     public void init() {
         TextView titleTv = binding.getRoot().findViewById(R.id.title_tv);
-        titleTv.setText("登  入");
+        titleTv.setText("登录");
 
         binding.registerTv.setOnClickListener(new View.OnClickListener() {
             @Override

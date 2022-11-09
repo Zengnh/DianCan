@@ -101,7 +101,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements V
             TextView tv = tabsTv[i];
             ImageView iv = tabsIv[i];
             if (position == i){
-                tv.setTextColor(Color.parseColor("#975D19"));
+                tv.setTextColor(Color.parseColor("#FCC328"));
                 iv.setImageResource(selectIvIds[i]);
             }else {
                 tv.setTextColor(Color.parseColor("#7D7D7D"));

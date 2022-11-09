@@ -252,7 +252,7 @@ class PersonInfoActivity extends BaseActivity<ActivityPersonInfoBinding> {
 
                     if (data.isSuccess()){
                         cover_img = data.getData().getUrl();
-                        RequestOptions options = new RequestOptions().placeholder(R.mipmap.logo);
+                        RequestOptions options = new RequestOptions().placeholder(R.mipmap.logo_new);
                         Glide.with(thisAtv).load(cover_img).apply(options).into(binding.avatarIv);
                     }
 

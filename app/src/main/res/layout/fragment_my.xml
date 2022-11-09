@@ -176,7 +176,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:tint="#975D19"
+                            android:tint="@color/blue"
                             android:layout_width="23dp"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
@@ -217,7 +217,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:tint="#975D19"
+                            android:tint="@color/blue"
                             android:layout_width="23dp"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
@@ -259,7 +259,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:tint="#975D19"
+                            android:tint="@color/blue"
                             android:layout_width="23dp"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
@@ -300,7 +300,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:tint="#975D19"
+                            android:tint="@color/blue"
                             android:layout_width="23dp"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
@@ -321,7 +321,7 @@
                         android:layout_gravity="center_vertical|right"
                         android:layout_marginRight="25dp"
                         android:text="@{data.score}"
-                        android:textColor="#975D19"
+                        android:textColor="@color/blue"
                         android:textSize="@dimen/my_item"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>

@@ -92,7 +92,7 @@ class ShopDetailsActivity extends BaseActivity<ActivityShopDetailsBinding> {
         });
         TextView titleTv = binding.getRoot().findViewById(R.id.title_tv);
         titleTv.setText(name);
-        RequestOptions options = new RequestOptions().placeholder(R.mipmap.wu_img);
+        RequestOptions options = new RequestOptions().placeholder(R.mipmap.logo_new);
         Glide.with(thisAtv).load(img).apply(options).into(binding.avatarIv);
 
         listDialog = new PopupListDialog();

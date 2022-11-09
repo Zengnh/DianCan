@@ -66,7 +66,7 @@ class OrderFragment extends BaseFragment<FragmentOrderBinding> {
                     params.bottomMargin = dp8;
                 }
                 binding.layout.setLayoutParams(params);
-                RequestOptions options = new RequestOptions().placeholder(R.mipmap.wu_img);
+                RequestOptions options = new RequestOptions().placeholder(R.mipmap.logo_new);
                 Glide.with(thisAtv).load(data.getProductImage()).apply(options).into(binding.imgIv);
             }
         };

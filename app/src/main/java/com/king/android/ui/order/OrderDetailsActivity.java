@@ -49,7 +49,7 @@ class OrderDetailsActivity extends BaseActivity<ActivityOrderDetailsBinding> {
         initXingXing();
         selectXingXing();
 
-        RequestOptions options = new RequestOptions().placeholder(R.mipmap.wu_img);
+        RequestOptions options = new RequestOptions().placeholder(R.mipmap.logo_new);
         Glide.with(thisAtv).load(order.getProductImage()).apply(options).into(binding.imgIv);
         binding.setData(order);
         binding.btn.setOnClickListener(new View.OnClickListener() {

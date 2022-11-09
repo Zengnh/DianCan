@@ -33,7 +33,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_toRightOf="@id/title1_tv"
                 android:text="0"
-                android:textColor="#975D19"
+                android:textColor="@color/blue"
                 android:textSize="18sp" />
         </RelativeLayout>
         <com.king.android.views.MyListView

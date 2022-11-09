@@ -106,7 +106,7 @@ class ShopCarFragment extends BaseFragment<FragmentShopcarBinding> {
             public void onItemBindData(BaseKViewHolder holder, ItemShopcarBinding binding, Cart data, int position) {
                 data.setTotal(new BigDecimal(data.getNum()).multiply(new BigDecimal(data.getPrice())).stripTrailingZeros().toPlainString());
                 binding.setData(data);
-                RequestOptions options = new RequestOptions().placeholder(R.mipmap.wu_img);
+                RequestOptions options = new RequestOptions().placeholder(R.mipmap.logo_new);
                 Glide.with(thisAtv).load(data.getProduct_img()).apply(options).into(binding.imgIv);
                 binding.delIv.setOnClickListener(new View.OnClickListener() {
                     @Override

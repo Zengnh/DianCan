@@ -166,7 +166,7 @@ public class HomeFragment extends BaseFragment<FragmentHomeBinding> implements O
         adapter = new BaseKAdapter<Shops, ItemHomeBinding>() {
             @Override
             public void onItemBindData(BaseKViewHolder holder, ItemHomeBinding binding, Shops data, int position) {
-                RequestOptions options = new RequestOptions().placeholder(R.mipmap.wu_img);
+                RequestOptions options = new RequestOptions().placeholder(R.mipmap.logo_new);
                 Glide.with(thisAtv).load(data.getLogo()).apply(options).into(binding.image);
                 binding.setData(data);
             }

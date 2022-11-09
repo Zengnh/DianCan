@@ -476,7 +476,7 @@
                                 android:layout_marginTop="17dp"
                                 android:layout_marginBottom="16dp"
                                 android:text="計算後金額:0元"
-                                android:textColor="#975D19"
+                                android:textColor="@color/blue"
                                 android:textSize="@dimen/shopcar_item_text"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -497,7 +497,7 @@
                             android:layout_height="50dp"
                             android:gravity="center"
                             android:text="加入購物車"
-                            android:textColor="#975D19"
+                            android:textColor="@color/blue"
                             android:textSize="@dimen/shopcar_btn_text" />
 
                         <androidx.cardview.widget.CardView
@@ -508,7 +508,7 @@
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="15dp"
                             android:layout_weight="2"
-                            app:cardBackgroundColor="#975D19"
+                            app:cardBackgroundColor="@color/blue"
                             app:cardCornerRadius="5dp">
 
                             <TextView
