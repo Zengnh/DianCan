@@ -141,18 +141,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"/>
                 </LinearLayout>
-
-
             </LinearLayout>
-
-
-
-
         </LinearLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
             <TextView
                 android:id="@+id/update_psw"
                 android:layout_gravity="bottom"
@@ -166,6 +156,5 @@
                 android:layout_marginRight="18dp"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"/>
-        </FrameLayout>
     </LinearLayout>
 </layout>
