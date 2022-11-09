@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="data"
+            type="com.king.android.model.SizeInfo" />
+    </data>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@{data.name}"
+            android:textColor="#999999"
+            android:textSize="@dimen/shopcar_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/sub_tv"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:background="@drawable/shape_d1d1d1_line_05_radius_4"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/xnumber_tv"
+                android:text="@{java.lang.String.valueOf(data.number)}"
+                android:gravity="center_horizontal"
+                android:textColor="#999999"
+                android:textSize="15sp"
+                android:layout_width="37dp"
+                android:layout_height="wrap_content"/>
+
+            <FrameLayout
+                android:id="@+id/add_tv"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:background="@drawable/shape_d1d1d1_line_05_radius_4"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:text="@{data.money+'元'}"
+            android:textStyle="bold"
+            android:layout_marginRight="17dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/shopcar_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

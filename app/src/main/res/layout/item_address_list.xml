@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="data"
+            type="com.king.android.model.Address" />
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:paddingLeft="17dp"
+                    android:paddingRight="12dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:src="@mipmap/my_ic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:textSize="@dimen/address_text"
+                        android:textColor="#999999"
+                        android:text="姓名"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:background="@null"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="@dimen/address_text"
+                        android:textColor="@color/black"
+                        android:text="@{data.name}"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:id="@+id/del_iv"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/del_ic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <View
+                    android:background="#E5E5E5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.5dp"/>
+
+                <LinearLayout
+                    android:paddingLeft="17dp"
+                    android:paddingRight="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        android:src="@mipmap/location1_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/address_tv"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="@dimen/address_text"
+                        android:textColor="#999999"
+                        android:text="地址"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_gravity="top"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:textSize="@dimen/address_text"
+                            android:textColor="@color/black"
+                            android:text="@{data.district_name+data.area_name+data.address}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginBottom="21dp"
+                            android:layout_marginTop="28dp"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="@dimen/address_text"
+                            android:textColor="@color/black"
+                            android:text="@{data.tel}"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/edit_iv"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/edit_ic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/layout_title_bar"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="22dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/logo"
+                android:layout_width="93dp"
+                android:layout_height="93dp"/>
+
+            <LinearLayout
+                android:background="@drawable/shape_e1dddd_line_radius_05"
+                android:layout_marginTop="29dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:src="@mipmap/phone_ic"
+                        android:layout_marginLeft="23dp"
+                        android:adjustViewBounds="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"/>
+                    <EditText
+                        android:id="@+id/edit_phone"
+                        android:layout_marginLeft="21dp"
+                        android:hint="手機號碼"
+                        android:textSize="16sp"
+                        android:textColorHint="#999999"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <View
+                    android:background="#ECE8E8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:src="@mipmap/msg_ic"
+                        android:layout_marginLeft="23dp"
+                        android:adjustViewBounds="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"/>
+                    <EditText
+                        android:id="@+id/edit_code"
+                        android:layout_marginLeft="21dp"
+                        android:hint="輸入驗證碼"
+                        android:textSize="16sp"
+                        android:textColorHint="#999999"
+                        android:background="@null"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+
+
+                    <TextView
+                        android:id="@+id/send_code_btn"
+                        android:layout_marginRight="9dp"
+                        android:background="@drawable/shape_975d19_radius_3"
+                        android:gravity="center"
+                        android:text="發送驗證碼"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textSize="@dimen/login_getcode_btn"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"/>
+                </LinearLayout>
+                <View
+                    android:background="#ECE8E8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:src="@mipmap/psw_ic"
+                        android:layout_marginLeft="23dp"
+                        android:adjustViewBounds="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"/>
+                    <EditText
+                        android:id="@+id/edit_psw"
+                        android:layout_marginLeft="21dp"
+                        android:hint="密碼"
+                        android:inputType="textPassword"
+                        android:textSize="16sp"
+                        android:textColorHint="#999999"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <View
+                    android:background="#ECE8E8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:src="@mipmap/psw_ic"
+                        android:layout_marginLeft="23dp"
+                        android:adjustViewBounds="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"/>
+                    <EditText
+                        android:id="@+id/edit_psw2"
+                        android:layout_marginLeft="21dp"
+                        android:hint="再輸入密碼"
+                        android:inputType="textPassword"
+                        android:textSize="16sp"
+                        android:textColorHint="#999999"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/update_psw"
+                android:layout_gravity="bottom"
+                android:background="@drawable/shape_975d19_radius_10"
+                android:gravity="center"
+                android:text="修改密碼"
+                android:textColor="@color/white"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

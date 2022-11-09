@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/layout_title_bar"/>
+
+            <TextView
+                android:id="@+id/title1_tv"
+                android:text="點數記錄"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_centerHorizontal="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"/>
+
+            <TextView
+                android:id="@+id/number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/title1_tv"
+                android:text="0"
+                android:textColor="#975D19"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <com.king.android.views.MyListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>

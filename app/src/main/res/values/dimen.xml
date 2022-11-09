@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_tab_text">12sp</dimen>
+    <dimen name="home_tab_img">23dp</dimen>
+    <dimen name="home_search_text">12sp</dimen>
+    <dimen name="home_class_text">12sp</dimen>
+    <dimen name="home_item_title">16sp</dimen>
+    <dimen name="home_item_address">14sp</dimen>
+    <dimen name="home_item_zhekou">11sp</dimen>
+    <dimen name="home_item_km">12sp</dimen>
+
+
+    <dimen name="order_item_time">14sp</dimen>
+    <dimen name="order_item_name">17sp</dimen>
+    <dimen name="order_item_shop_name">16sp</dimen>
+    <dimen name="order_item_shop_price">16sp</dimen>
+    <dimen name="order_item_text">14sp</dimen>
+
+    <dimen name="shopcar_btn_text">16sp</dimen>
+
+    <dimen name="shopcar_item_price">18sp</dimen>
+    <dimen name="shopcar_item_name">16sp</dimen>
+    <dimen name="shopcar_item_text">14sp</dimen>
+
+    <dimen name="my_title">18sp</dimen>
+    <dimen name="my_code">15sp</dimen>
+    <dimen name="my_money">15sp</dimen>
+    <dimen name="my_text">18sp</dimen>
+    <dimen name="my_item">15sp</dimen>
+
+    <dimen name="login_text">14sp</dimen>
+    <dimen name="login_register_btn">18sp</dimen>
+    <dimen name="login_getcode_btn">15sp</dimen>
+
+    <dimen name="personinfo_text">14sp</dimen>
+
+    <dimen name="address_text">14sp</dimen>
+</resources>
