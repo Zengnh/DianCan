@@ -7,6 +7,6 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
-rootProject.name = "Android"
+rootProject.name = "ZStore"
 include ':app'
 include ':base'
