@@ -97,7 +97,7 @@
                             android:layout_height="50dp">
                             <TextView
                                 android:textColor="@color/white"
-                                android:text="付現金"
+                                android:text="付现金"
                                 android:gravity="center"
                                 android:textSize="@dimen/shopcar_btn_text"
                                 android:layout_width="match_parent"
@@ -117,7 +117,7 @@
                             android:layout_height="50dp">
                             <TextView
                                 android:textColor="@color/white"
-                                android:text="綫上刷卡"
+                                android:text="线上刷卡"
                                 android:textSize="@dimen/shopcar_btn_text"
                                 android:gravity="center"
                                 android:layout_width="match_parent"

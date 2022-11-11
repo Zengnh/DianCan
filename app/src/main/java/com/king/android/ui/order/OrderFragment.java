@@ -35,7 +35,7 @@ class OrderFragment extends BaseFragment<FragmentOrderBinding> {
     @Override
     public void init() {
         TextView titleTv = binding.getRoot().findViewById(R.id.title_tv);
-        titleTv.setText("訂單記錄");
+        titleTv.setText("订单记录");
 
         if (TextUtils.equals("1",getIntentData().getString("isActivity"))){
             ImageView backIv = binding.getRoot().findViewById(R.id.back_iv);
@@ -74,7 +74,7 @@ class OrderFragment extends BaseFragment<FragmentOrderBinding> {
             @Override
             public void onClick(View v, Order data, ItemOrderBinding binding, int position) {
                 if (!"3".equals(data.getSendStatus())){
-                    toast("訂單未完成不可評論，請完成訂單后評論");
+                    toast("订单未完成不可评论，请完成订单后评论");
                     return;
                 }
 

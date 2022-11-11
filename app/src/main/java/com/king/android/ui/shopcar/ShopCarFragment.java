@@ -72,7 +72,7 @@ class ShopCarFragment extends BaseFragment<FragmentShopcarBinding> {
     @Override
     public void init() {
         TextView titleTv = binding.getRoot().findViewById(R.id.title_tv);
-        titleTv.setText("購物車");
+        titleTv.setText("购物车");
 
         String tagName= "shop_car";
         binding.scanIv.setOnClickListener(new View.OnClickListener() {
@@ -138,7 +138,7 @@ class ShopCarFragment extends BaseFragment<FragmentShopcarBinding> {
                         int num = Integer.parseInt(str);
                         num--;
                         if (num <= 0) {
-                            toast("數量不能少於1份");
+                            toast("数量不能少于1份");
                             return;
                         }
                         binding.numberTv.setText(num + "");
@@ -180,7 +180,7 @@ class ShopCarFragment extends BaseFragment<FragmentShopcarBinding> {
 
                 List<Cart> data = adapter.getData();
                 if (data.isEmpty()){
-                    toast("當前購物車爲空，請添加商品后購買");
+                    toast("当前购物车为空，请添加商品后购买");
                     return;
                 }
 
@@ -219,7 +219,7 @@ class ShopCarFragment extends BaseFragment<FragmentShopcarBinding> {
             public void click(View v) {
                 List<Cart> data = adapter.getData();
                 if (data.isEmpty()){
-                    toast("當前購物車爲空，請添加商品后購買");
+                    toast("当前购物车为空，请添加商品后购买");
                     return;
                 }
 
@@ -261,7 +261,7 @@ class ShopCarFragment extends BaseFragment<FragmentShopcarBinding> {
             total = total.add(new BigDecimal(datum.getNum()).multiply(new BigDecimal(datum.getPrice())));
         }
 
-       binding.totalTv.setText("小計:"+total.stripTrailingZeros().toPlainString()+"元");
+       binding.totalTv.setText("小计:"+total.stripTrailingZeros().toPlainString()+"元");
     }
 
     @Override
@@ -371,7 +371,7 @@ class ShopCarFragment extends BaseFragment<FragmentShopcarBinding> {
             }
         }
         if (sb.length() ==0){
-            Toast.makeText(thisAtv, "請選擇指定的店鋪下單", Toast.LENGTH_SHORT).show();
+            Toast.makeText(thisAtv, "请选择指定的店铺下单", Toast.LENGTH_SHORT).show();
             return;
         }
         dialog.show();
@@ -439,7 +439,7 @@ class ShopCarFragment extends BaseFragment<FragmentShopcarBinding> {
         public void onReceive(Context context, Intent intent) {
             floor = intent.getStringExtra("floor");
             number = intent.getStringExtra("number");
-            binding.floorTipsTv.setText(floor+"樓"+number+"號");
+            binding.floorTipsTv.setText(floor+"楼"+number+"号");
             binding.scanIv.setVisibility(View.GONE);
         }
     }
@@ -449,5 +449,4 @@ class ShopCarFragment extends BaseFragment<FragmentShopcarBinding> {
         thisAtv.unregisterReceiver(broadcast);
         super.onDestroy();
     }
-
 }

@@ -1,5 +1,7 @@
 package com.king.android.model;
 
+import android.text.TextUtils;
+
 import com.king.base.utils.BaseSp;
 
 import java.math.BigDecimal;
@@ -209,6 +211,9 @@ class User extends BaseSp {
     }
 
     public String getScore() {
+        if(TextUtils.isEmpty(score)){
+            score="0";
+        }
         return new BigDecimal(score).stripTrailingZeros().toPlainString();
 //        return score;
     }

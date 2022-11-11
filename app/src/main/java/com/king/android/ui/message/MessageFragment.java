@@ -31,7 +31,7 @@ public class MessageFragment extends BaseFragment<FragmentMessageBinding> {
     @Override
     public void init() {
         TextView titleTv = binding.getRoot().findViewById(R.id.title_tv);
-        titleTv.setText("最新 優惠消息");
+        titleTv.setText("最新消息");
         adapter = new BaseKAdapter<AppMessage, ItemMessageBinding>() {
             @Override
             public void onItemBindData(BaseKViewHolder holder, ItemMessageBinding binding, AppMessage data, int position) {
