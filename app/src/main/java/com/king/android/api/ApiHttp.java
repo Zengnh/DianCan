@@ -7,7 +7,7 @@ public
 class ApiHttp {
 
     public static ApiService getApiService(){
-        return new BaseRetrofit<ApiService>(ApiService.class, Constants.HOST+"/index.php/").getService();
+        return new BaseRetrofit<ApiService>(ApiService.class, Constants.HOST).getService();
     }
 
 }

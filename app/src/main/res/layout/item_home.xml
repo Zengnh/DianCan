@@ -65,7 +65,7 @@
                         android:layout_height="wrap_content"/>
                     <TextView
                         android:layout_marginLeft="4dp"
-                        android:text="km"
+                        android:text=""
                         android:textSize="@dimen/home_item_km"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -88,7 +88,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"/>
                     <TextView
-                        android:text="15飲品 2簡餐"
+                        android:text=""
                         android:textStyle="bold"
                         android:textSize="@dimen/home_item_address"
                         android:visibility="gone"
@@ -99,8 +99,8 @@
 <!--                android:background="@drawable/shape_fce8e2_radius_4"-->
 
                 <TextView
-                   android:background="@drawable/bg_org_circleline"
-                    android:text="95折促銷中"
+                    android:background="@drawable/bg_org_circleline"
+                    android:text="@{data.remark}"
                     android:paddingLeft="7dp"
                     android:paddingRight="7dp"
                     android:paddingTop="3dp"

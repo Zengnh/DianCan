@@ -67,11 +67,12 @@ public class MessageFragment extends BaseFragment<FragmentMessageBinding> {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(data -> {
-                    List<AppMessage> msgData = new ArrayList<>();
-                    msgData.add(new AppMessage(1, "系统信息", "08:35", "訂單已發貨，請留意的您的手機，保持暢通單已發貨 請留意的您的手單已發貨，請留意的您的手單已發貨 單已發貨，請留意的您的手單已發貨，請留意的您的 手，請留意的您的手"));
-                    msgData.add(new AppMessage(2, "活动消息", "昨天 12:00", "訂單已發貨，請留意的您的手機，保持暢通單已發貨 請留意的您的手單已發貨，請留意的您的手單已發貨 單已發貨，請留意的您的手單已發貨，請留意的您的 手，請留意的您的手"));
-                    msgData.add(new AppMessage(3, "物流信息", "2022-10-12 12:00", "訂單已發貨，請留意的您的手機，保持暢通單已發貨 請留意的您的手單已發貨，請留意的您的手單已發貨 單已發貨，請留意的您的手單已發貨，請留意的您的 手，請留意的您的手"));
-                    msgData.add(new AppMessage(2, "活动消息", "2022-09-12 12:00", "訂單已發貨，請留意的您的手機，保持暢通單已發貨 請留意的您的手單已發貨，請留意的您的手單已發貨 單已發貨，請留意的您的手單已發貨，請留意的您的 手，請留意的您的手"));
+                    List<AppMessage> msgData = (List<AppMessage>) data.getData();
+//                    List<AppMessage> msgData = new ArrayList<>();
+//                    msgData.add(new AppMessage(1, "系统信息", "08:35", "訂單已發貨，請留意的您的手機，保持暢通單已發貨 請留意的您的手單已發貨，請留意的您的手單已發貨 單已發貨，請留意的您的手單已發貨，請留意的您的 手，請留意的您的手"));
+//                    msgData.add(new AppMessage(2, "活动消息", "昨天 12:00", "訂單已發貨，請留意的您的手機，保持暢通單已發貨 請留意的您的手單已發貨，請留意的您的手單已發貨 單已發貨，請留意的您的手單已發貨，請留意的您的 手，請留意的您的手"));
+//                    msgData.add(new AppMessage(3, "物流信息", "2022-10-12 12:00", "訂單已發貨，請留意的您的手機，保持暢通單已發貨 請留意的您的手單已發貨，請留意的您的手單已發貨 單已發貨，請留意的您的手單已發貨，請留意的您的 手，請留意的您的手"));
+//                    msgData.add(new AppMessage(2, "活动消息", "2022-09-12 12:00", "訂單已發貨，請留意的您的手機，保持暢通單已發貨 請留意的您的手單已發貨，請留意的您的手單已發貨 單已發貨，請留意的您的手單已發貨，請留意的您的 手，請留意的您的手"));
                     adapter.setNewData(msgData);
                     dialog.dismiss();
 //                    binding.moneyTv.setText(new BigDecimal(data.getData().getMoney()).stripTrailingZeros().toPlainString());

@@ -1,7 +1,6 @@
 package com.king.android.model;
 
-public
-class Shops {
+public class Shops {
     private String shop_id;
     private String category_id;
     private String shop_name;
@@ -15,6 +14,15 @@ class Shops {
     private String lng;
     private String lat;
     private String distance;
+    private String remark;
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
 
     public String getShop_id() {
         return shop_id;

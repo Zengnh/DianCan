@@ -1,6 +1,7 @@
 package com.king.android.api;
 
 import com.king.android.model.Address;
+import com.king.android.model.AppMessage;
 import com.king.android.model.Category;
 import com.king.android.model.Charge;
 import com.king.android.model.City;
@@ -127,8 +128,8 @@ interface ApiService {
     @GET("api/user/moneyTotal")
     Observable<Result<MoneyTota>> moneyTota(@Query("access_token") String access_token);
 
-    @GET("api/user/moneyTotal")
-    Observable<Result<MoneyTota>> queryMessage(@Query("access_token") String access_token);
+    @GET("api/user/queryMessage")
+    Observable<Result<List<AppMessage>>> queryMessage(@Query("access_token") String access_token);
 
     @GET("/api/user/getCityAll")
     Observable<Result<List<City>>> getCityAll();

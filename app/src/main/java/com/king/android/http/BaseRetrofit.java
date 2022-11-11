@@ -31,18 +31,18 @@ public class BaseRetrofit<T> {
         dispatcher.setMaxRequestsPerHost(10);
 
         HttpLoggingInterceptor httpLog = null;
-        if (BuildConfig.DEBUG) {
-            httpLog = new HttpLoggingInterceptor(new HttpLog());
-            httpLog.setLevel(HttpLoggingInterceptor.Level.BODY);
-        }
+//        if (BuildConfig.DEBUG) {
+        httpLog = new HttpLoggingInterceptor(new HttpLog());
+        httpLog.setLevel(HttpLoggingInterceptor.Level.BODY);
+//        }
 
         OkHttpClient.Builder builder = new OkHttpClient.Builder()
                 .readTimeout(DEFAULT_TIME, TimeUnit.SECONDS)//设置读取超时时间
                 .connectTimeout(DEFAULT_TIME, TimeUnit.SECONDS)//设置请求超时时间
                 .writeTimeout(DEFAULT_TIME, TimeUnit.SECONDS);//设置写入超时时间
-        if (BuildConfig.DEBUG) {
-            builder.addInterceptor(httpLog);//添加打印拦截器
-        }
+//        if (BuildConfig.DEBUG) {
+        builder.addInterceptor(httpLog);//添加打印拦截器
+//        }
         builder.dispatcher(dispatcher);
         OkHttpClient okHttpClient = builder.build();
 
