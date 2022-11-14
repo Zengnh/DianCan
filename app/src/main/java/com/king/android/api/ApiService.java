@@ -14,6 +14,7 @@ import com.king.android.model.ProductInfo;
 import com.king.android.model.Score;
 import com.king.android.model.ShopInfo;
 import com.king.android.model.Shops;
+import com.king.android.model.StoreCarRoot;
 import com.king.android.model.Upload;
 import com.king.android.model.User;
 
@@ -123,7 +124,7 @@ interface ApiService {
     Observable<Result<Charge>> addCartOrder(@FieldMap Map<String,Object> map);
 
     @GET("/api/user/myCart")
-    Observable<Result> myCart(@Query("access_token") String access_token);
+    Observable<Result<StoreCarRoot>> myCart(@Query("access_token") String access_token);
 
     @GET("api/user/moneyTotal")
     Observable<Result<MoneyTota>> moneyTota(@Query("access_token") String access_token);

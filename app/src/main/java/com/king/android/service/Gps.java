@@ -90,7 +90,7 @@ class Gps {
         String address = "纬度："+location.getLatitude()+"经度："+location.getLongitude();
         log.append("Gps.showLocation->").append(address).append("\n");
 
-        Log.d("LocationListener", "showLocation: "+address);
+//        Log.d("LocationListener", "showLocation: "+address);
         if (isFirst){
             isFirst = false;
             lat = location.getLatitude();
@@ -125,7 +125,7 @@ class Gps {
         // 如果位置发生变化，重新显示
         @Override
         public void onLocationChanged(Location location) {
-            Log.d(TAG, "onLocationChanged: ");
+//            Log.d(TAG, "onLocationChanged: ");
             if (location != null)
             showLocation(location);
         }

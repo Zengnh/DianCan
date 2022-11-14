@@ -2,10 +2,8 @@ package com.king.android.ui.shopcar;
 
 import static android.app.Activity.RESULT_OK;
 
-import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.text.TextUtils;
@@ -29,6 +27,8 @@ import com.king.android.databinding.FragmentShopcarBinding;
 import com.king.android.databinding.ItemEmptyShopCartBinding;
 import com.king.android.databinding.ItemShopcarBinding;
 import com.king.android.model.Cart;
+import com.king.android.model.StoreCarList;
+import com.king.android.model.StoreCarRoot;
 import com.king.android.model.User;
 import com.king.android.ui.QRCodeActivity;
 import com.king.android.ui.WebViewActivity;
@@ -282,28 +282,31 @@ class ShopCarFragment extends BaseFragment<FragmentShopcarBinding> {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(data -> {
                     dialog.dismiss();
-
-                    String body = new Gson().toJson(data.getData());
-
-                    JSONObject json = new JSONObject(body);
-                    JSONArray list = json.getJSONArray("list");
+                    StoreCarRoot carRoot=data.getData();
+//                    String body = new Gson().toJson(data.getData());
+//                    JSONObject json = new JSONObject(body);
+//                    JSONArray list = json.getJSONArray("list");
                     Gson gson = new Gson();
                     List<Cart> cartList = new ArrayList<>();
-                    for (int i = 0; i < list.length(); i++) {
-                        JSONObject object = list.getJSONObject(i);
-                        String shop_name = object.getString("shop_name");
-                        String shop_id = object.getString("shop_id");
-                        JSONArray list1 = object.getJSONArray("list");
-                        for (int j = 0; j < list1.length(); j++) {
-                            JSONObject obj = list1.getJSONObject(j);
-                            Cart cart = gson.fromJson(obj.toString(),Cart.class);
-                            cart.setShop_name(shop_name);
-                            try {
-                                cart.setIs_outside(obj.getJSONObject("info").getInt("is_outside")+"");
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
-                            cart.setShop_id(shop_id);
+                    for (int i = 0; i < carRoot.getList().size(); i++) {
+//                        JSONObject object = list.getJSONObject(i);
+//                        String shop_name = object.getString("shop_name");
+//                        String shop_id = object.getString("shop_id");
+//                        JSONArray list1 = object.getJSONArray("list");
+
+                        StoreCarList carList=carRoot.getList().get(i);
+
+                        for (int j = 0; j < carList.getList().size(); j++) {
+//                            JSONObject obj = list1.getJSONObject(j);
+//                            Cart cart = gson.fromJson(obj.toString(),Cart.class);
+                            Cart cart = carList.getList().get(j);
+                            cart.setShop_name(carList.getShop_name());
+//                            try {
+//                                cart.setIs_outside(obj.getJSONObject("info").getInt("is_outside")+"");
+//                            } catch (Exception e) {
+//                                e.printStackTrace();
+//                            }
+                            cart.setShop_id(carList.getShop_id());
                             cart.setIndex(j);
                             cartList.add(cart);
                         }

@@ -130,6 +130,7 @@
                             android:background="@drawable/shape_d1d1d1_line_05_radius_4"
                             android:gravity="center"
                             android:text="-"
+                            android:padding="0dp"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -147,6 +148,7 @@
                             android:id="@+id/add_tv"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
+                            android:padding="0dp"
                             android:background="@drawable/shape_d1d1d1_line_05_radius_4"
                             android:gravity="center"
                             android:text="+"
